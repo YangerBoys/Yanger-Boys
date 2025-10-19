@@ -1,0 +1,899 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>YANGER BOYS — Premium Gents & Kids Jeans & Shirts</title>
+    <meta name="description" content="YANGER BOYS — Manufacturer & Wholesaler of gents and kids jeans and shirts. Latest trends, premium quality denim, bulk supply." />
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        /* COLOR VARIABLES - UPDATED COLOR SCHEME */
+        :root{
+            --brand:#1a1f36;
+            --accent:#c53a2b;
+            --accent-dark:#a52e22;
+            --muted:#6b7280;
+            --bg:#f9f9fb;
+            --card:#ffffff;
+            --moq-highlight: #e63946;
+            --gold: #d4af37;
+            --light-gray: #f1f5f9;
+        }
+        
+        *{box-sizing:border-box}
+        html,body{height:100%;margin:0;font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,'Helvetica Neue',Arial; color:var(--brand);background:var(--bg); line-height:1.6;}
+        a{color:inherit;text-decoration:none}
+        
+        /* IMPROVED HEADER */
+        header{
+            background:linear-gradient(90deg, rgba(26,31,54,0.98), rgba(197,58,43,0.9));
+            color:#fff;
+            padding:16px 24px;
+            position:sticky;
+            top:0;
+            z-index:100;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            backdrop-filter: blur(10px);
+        }
+        .container{max-width:1200px;margin:0 auto;padding:28px}
+        .nav{display:flex;gap:16px;align-items:center;justify-content:space-between}
+        .brand{display:flex;align-items:center;gap:12px;font-weight:800;font-size:22px; letter-spacing: -0.5px;}
+        .brand-logo {
+            width: 50px;
+            height: 50px;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .brand-logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        nav ul{display:flex;gap:24px;align-items:center;margin:0;padding:0;list-style:none}
+        nav ul li a {font-weight: 500; transition: all 0.3s ease; padding: 8px 0; position: relative;}
+        nav ul li a:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: white;
+            transition: width 0.3s ease;
+        }
+        nav ul li a:hover:after {width: 100%;}
+        .btn{background:#fff;color:var(--brand);padding:10px 20px;border-radius:8px;font-weight:600; cursor:pointer; border:none; transition: all 0.3s ease;}
+        .btn:hover {transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.15);}
+        .btn-accent {background: var(--accent) !important; color: white !important;}
+        .btn-accent:hover {background: var(--accent-dark) !important;}
+
+        /* ENHANCED HERO SECTION */
+        .hero{
+            padding:0 24px;
+            background-image:linear-gradient(135deg, rgba(26,31,54,0.95), rgba(197,58,43,0.85)), url('https://images.unsplash.com/photo-1542272604-787c3835535d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1926&q=80');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero-grid{
+            display:grid;
+            grid-template-columns:1fr 420px;
+            gap:40px;
+            align-items: center;
+            padding: 60px 0 40px;
+        }
+        .hero h1{
+            font-size:48px;
+            margin:0 0 16px;
+            color:#fff;
+            line-height:1.1;
+            letter-spacing:-0.02em;
+            animation: fadeInUp 0.8s ease-out;
+            font-weight: 800;
+        }
+        .hero p{
+            color:rgba(255,255,255,0.9);
+            margin:0 0 24px;
+            font-size:18px;
+            line-height:1.6;
+            animation: fadeInUp 0.8s ease-out 0.2s;
+            animation-fill-mode: backwards;
+            max-width: 90%;
+        }
+        .hero .cta{
+            display:flex;
+            gap:16px;
+            animation: fadeInUp 0.8s ease-out 0.4s;
+            animation-fill-mode: backwards;
+            flex-wrap: wrap;
+        }
+        .chip{
+            background:rgba(255,255,255,0.15);
+            padding:10px 16px;
+            border-radius:10px;
+            color:#fff;
+            display:inline-block;
+            font-size:14px;
+            font-weight:600;
+            animation: fadeInUp 0.8s ease-out 0.6s;
+            animation-fill-mode: backwards;
+            border: 1px solid rgba(255,255,255,0.2);
+            backdrop-filter: blur(10px);
+        }
+        .moq-badge {
+            background: var(--moq-highlight);
+            color: white;
+            padding: 6px 12px;
+            border-radius: 6px;
+            font-size: 13px;
+            font-weight: 700;
+            display: inline-block;
+            margin-top: 12px;
+            box-shadow: 0 4px 8px rgba(230,57,70,0.3);
+        }
+
+        /* IMAGE AND VIDEO ALIGNMENT */
+        .hero-img-wrapper {
+            position: relative;
+            width: 100%;
+            max-width: 480px;
+            animation: fadeInRight 0.8s ease-out;
+        }
+        .hero-img-wrapper img {
+            width: 100%;
+            height: 360px;
+            border-radius: 14px;
+            object-fit: cover;
+            display: block;
+            box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+            border: 2px solid rgba(255,255,255,0.1);
+        }
+        .hero-img-caption {
+            position: absolute;
+            bottom: 16px;
+            left: 16px;
+            background: rgba(17,24,39,0.85);
+            color: #fff;
+            padding: 10px 16px;
+            border-radius: 6px;
+            font-weight: 700;
+            font-size: 18px;
+            backdrop-filter: blur(10px);
+        }
+        .hero-video-wrapper {
+            margin-top: 30px !important;
+            animation: fadeInRight 0.8s ease-out 0.2s;
+            animation-fill-mode: backwards;
+        }
+        .hero-video-wrapper iframe {
+            width: 100%;
+            height: 360px !important;
+            border-radius: 14px;
+            display: block;
+            box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+            border: 2px solid rgba(255,255,255,0.1);
+        }
+
+        /* ANIMATIONS */
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes fadeInRight {
+            from { opacity: 0; transform: translateX(30px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+
+        /* PRODUCTS SECTION */
+        .section{padding:60px 24px}
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+            position: relative;
+        }
+        .section-title h2 {
+            font-size: 36px;
+            margin: 0 0 12px;
+            font-weight: 800;
+            color: var(--brand);
+            display: inline-block;
+        }
+        .section-title:after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background: var(--accent);
+            margin: 0 auto;
+            border-radius: 2px;
+        }
+        .section-subtitle {
+            text-align: center;
+            color: var(--muted);
+            margin-bottom: 40px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+        .card{
+            background:var(--card);
+            border-radius:16px;
+            padding:0;
+            box-shadow:0 8px 25px rgba(16,24,40,0.08);
+            display:flex;
+            flex-direction:column;
+            gap:0;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(0,0,0,0.05);
+        }
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 35px rgba(16,24,40,0.15);
+        }
+        .img-placeholder{
+            height:280px;
+            border-radius:0;
+            display:block;
+            background:linear-gradient(135deg,#e6eef0,#d8dfe2);
+            align-items:center;
+            justify-content:center;
+            display:flex;
+            color:var(--muted);
+            font-weight:600;
+            position:relative;
+            overflow: hidden;
+            cursor: pointer;
+        }
+        .img-placeholder img {
+            width: 100%; 
+            height: 100%; 
+            object-fit: cover; 
+            position: absolute; 
+            top: 0; 
+            left: 0;
+            opacity: 0; 
+            transition: opacity 1.5s ease-in-out;
+        }
+        .img-placeholder img:first-child { opacity: 1; }
+        .card-content {
+            padding: 20px;
+        }
+        .product-title{
+            font-weight:700;
+            font-size: 18px;
+            margin-bottom: 8px;
+        }
+        .product-id {
+            color: var(--accent);
+            font-weight: 600;
+            font-size: 14px;
+            margin-bottom: 8px;
+        }
+        .product-meta{
+            font-size:14px;
+            color:var(--muted);
+            margin-bottom: 12px;
+        }
+        .price{
+            font-weight:700;
+            margin-top:auto;
+            color: var(--brand);
+            font-size: 18px;
+        }
+
+        .button-group { 
+            display: flex; 
+            gap: 10px; 
+            margin-top: 15px;
+        }
+        .action-btn { 
+            display: block; 
+            width: 50%; 
+            padding: 12px 8px; 
+            cursor: pointer; 
+            text-transform: uppercase; 
+            font-weight: 600; 
+            text-decoration: none; 
+            border: 1px solid var(--accent); 
+            transition: all 0.3s;
+            text-align: center; 
+            font-size: 0.8em; 
+            border-radius: 8px;
+        }
+        .order-btn { 
+            background-color: var(--brand); 
+            color: white; 
+            border-color: var(--brand); 
+        }
+        .whatsapp-btn { 
+            background-color: #25D366; 
+            color: white; 
+            border-color: #25D366; 
+        }
+        .order-btn:hover { 
+            background-color: var(--accent); 
+            border-color: var(--accent); 
+            transform: translateY(-2px);
+        }
+        .whatsapp-btn:hover { 
+            background-color: #1aae4d; 
+            border-color: #1aae4d; 
+            transform: translateY(-2px);
+        }
+
+        /* About & Contact */
+        .two-col{
+            display:grid;
+            grid-template-columns:1fr 380px;
+            gap:40px;
+            align-items:start
+        }
+        .about-content {
+            background: var(--card);
+            padding: 30px;
+            border-radius: 16px;
+            box-shadow: 0 8px 25px rgba(16,24,40,0.08);
+        }
+        .contact-card{
+            background:var(--card);
+            padding:30px;
+            border-radius:16px;
+            box-shadow:0 8px 25px rgba(16,24,40,0.08);
+            position: sticky;
+            top: 100px;
+        }
+        .input{
+            width:100%;
+            padding:12px 16px;
+            border-radius:8px;
+            border:1px solid #e6e9ee;
+            margin-bottom:16px;
+            font-family: inherit;
+            transition: all 0.3s;
+        }
+        .input:focus {
+            outline: none;
+            border-color: var(--accent);
+            box-shadow: 0 0 0 3px rgba(197,58,43,0.1);
+        }
+
+        .footer{
+            padding:40px 24px;
+            background:#0b1120;
+            color:rgba(255,255,255,0.8);
+        }
+
+        /* IMAGE ZOOM MODAL STYLES */
+        .image-modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.95);
+            animation: fadeIn 0.3s;
+        }
+        
+        .modal-content {
+            margin: auto;
+            display: block;
+            max-width: 90%;
+            max-height: 90%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            object-fit: contain;
+        }
+        
+        .modal-close {
+            position: absolute;
+            top: 20px;
+            right: 35px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+            z-index: 1001;
+        }
+        
+        .modal-close:hover {
+            color: #bbb;
+        }
+        
+        .modal-nav {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+            padding: 0 20px;
+            z-index: 1001;
+        }
+        
+        .nav-btn {
+            color: white;
+            font-size: 30px;
+            font-weight: bold;
+            cursor: pointer;
+            background: rgba(0, 0, 0, 0.5);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background 0.3s;
+        }
+        
+        .nav-btn:hover {
+            background: rgba(0, 0, 0, 0.8);
+        }
+        
+        .modal-caption {
+            text-align: center;
+            color: #ccc;
+            padding: 10px 0;
+            position: absolute;
+            bottom: 20px;
+            width: 100%;
+            background: rgba(0,0,0,0.7);
+            padding: 15px;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        /* SUCCESS MESSAGE STYLES */
+        .success-message {
+            background: #d4ffd4;
+            color: #006400;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 15px;
+            text-align: center;
+            border: 2px solid #00cc00;
+            display: none;
+        }
+
+        /* CATEGORY TABS */
+        .category-tabs {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+        .category-tab {
+            padding: 12px 24px;
+            background: var(--light-gray);
+            border-radius: 50px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            border: 2px solid transparent;
+        }
+        .category-tab.active {
+            background: var(--accent);
+            color: white;
+        }
+        .category-tab:hover:not(.active) {
+            background: white;
+            border-color: var(--accent);
+        }
+
+        /* RESPONSIVE */
+        @media (max-width:1100px){
+            .hero-grid{grid-template-columns:1fr}
+            .grid{grid-template-columns:repeat(2,1fr)}
+            .two-col{grid-template-columns:1fr}
+            .hero-img-wrapper, .hero-video-wrapper { max-width: 100%; }
+            .contact-card { position: static; }
+        }
+        @media (max-width:768px){
+            .grid{grid-template-columns:1fr}
+            .brand{font-size:18px}
+            .hero h1{font-size:32px}
+            .action-btn { font-size:0.75em; padding: 10px 5px; }
+            .hero-img-wrapper img, .hero-video-wrapper iframe { height: 280px !important; }
+            .modal-content { max-width: 95%; }
+            .modal-close { top: 10px; right: 15px; font-size: 30px; }
+            .nav-btn { width: 40px; height: 40px; font-size: 20px; }
+            .section-title h2 { font-size: 28px; }
+            .hero p { max-width: 100%; }
+            .category-tabs { gap: 8px; }
+            .category-tab { padding: 10px 16px; font-size: 14px; }
+        }
+        @media (max-width:480px){
+            .hero .cta { flex-direction: column; }
+            .button-group { flex-direction: column; }
+            .action-btn { width: 100%; }
+        }
+        
+        .small{font-size:13px;color:var(--muted)}
+        .about-list { list-style: none; padding-left: 0; margin-top: 16px;}
+        .about-list li { margin-bottom: 8px; padding-left: 0; position: relative; }
+        .about-list li:before {
+            content: "•";
+            color: var(--accent);
+            font-weight: bold;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container nav">
+            <div class="brand">
+                <div class="brand-logo">
+                    <img src="https://i.ibb.co/KjMXLtGm/Chat-GPT-Image-Oct-13-2025-01-46-57-PM.png" alt="Yanger Boys Logo">
+                </div>
+                YANGER BOYS
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#products">Collections</a></li>
+                    <li><a href="#about-us">About</a></li>
+                    <li><a class="btn" href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container hero-grid">
+                <div>
+                    <span class="chip">In-house Manufacturer • Bulk Supply</span>
+                    <h1>Premium Denim, Joggers, Cargo & Korean Shirts</h1>
+                    <p>YANGER BOYS brings the latest fashion trends with high-quality fabrics and tailored fits. Wholesale orders, custom finishes, and reliable delivery for retailers and brands.</p>
+                    <div class="cta">
+                        <a class="btn btn-accent" href="#products">Browse Collection</a>
+                        <a class="chip" href="#contact">Request Wholesale Quote</a>
+                    </div>
+                    <div class="moq-badge">MINIMUM ORDER QUANTITY (MOQ): 50 PIECES PER DESIGN</div>
+                </div>
+                <div class="hero-img-wrapper">
+                    <img src="https://i.ibb.co/YBWFHRK4/Gemini-Generated-Image-xuv36exuv36exuv3.png" alt="Yanger Boys Denim Collection">
+                    <div class="hero-img-caption">YANGER BOYS — Signature Collection</div>
+                </div>
+            </div>
+            <div class="container hero-video-wrapper">
+                <iframe width="100%" height="360"
+                    src="https://www.youtube.com/embed/ufo1Y7_BDYo?autoplay=1&mute=1&loop=1&playlist=ufo1Y7_BDYo"
+                    title="Yanger Boys Denim"
+                    frameborder="0"
+                    allow="autoplay; encrypted-media"
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </section>
+
+        <section id="products" class="section">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Our Collections</h2>
+                </div>
+                <div class="section-subtitle">
+                    Discover our premium range of denim, joggers, cargo pants, and trendy Korean shirts. All products manufactured with the highest quality standards.
+                </div>
+                
+                <!-- Category Tabs -->
+                <div class="category-tabs">
+                    <div class="category-tab active" data-category="gents">Gents Denim</div>
+                    <div class="category-tab" data-category="kids">Kids Collection</div>
+                    <div class="category-tab" data-category="shirts">Korean Shirts</div>
+                </div>
+                
+                <!-- Gents Collection -->
+                <div id="gents-collection" class="collection-section">
+                    <h2 style="font-size:28px; margin-bottom: 25px; text-align: center;">GENTS DENIM COLLECTION</h2>
+                    <div id="gents-product-grid" class="grid"></div>
+                </div>
+                
+                <!-- Kids Collection -->
+                <div id="kids-collection" class="collection-section" style="display: none;">
+                    <h2 style="font-size:28px; margin-bottom: 25px; text-align: center;">KIDS DENIM COLLECTION</h2>
+                    <div id="kids-product-grid" class="grid"></div>
+                </div>
+
+                <!-- Korean Shirts Collection -->
+                <div id="shirts-collection" class="collection-section" style="display: none;">
+                    <h2 style="font-size:28px; margin-bottom: 25px; text-align: center;">KOREAN DESIGN SHIRTS - LATEST TRENDING</h2>
+                    <div id="shirts-product-grid" class="grid"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container two-col">
+                <div class="about-content" id="about-us">
+                    <h2>About YANGER BOYS</h2>
+                    <p>YANGER BOYS is a leading manufacturer and wholesaler of gents and kids jeans and shirts, offering the latest and most trending designs in the fashion industry.</p>
+                    <p>We specialize in premium-quality apparel that combines comfort, style, and durability, crafted to meet modern fashion needs.</p>
+
+                    <ul class="about-list">
+                        <li><strong>Company Name:</strong> YANGER BOYS</li>
+                        <li><strong>Business Type:</strong> Manufacturer & Wholesaler</li>
+                        <li><strong>Founder:</strong> Yaakub</li>
+                        <li><strong>Contact:</strong> +91 93101 91646</li>
+                        <li><strong>Products:</strong> Denim Jeans, Joggers, Cargo Pants, Korean Shirts</li>
+                    </ul>
+                    <p class="small">Ya Wariso Enterprises, 521, Chandan Park, Prem Nagar - 3, Near - Pawan Medical Store, Delhi-110086</p>
+                </div>
+
+                <aside class="contact-card" id="contact">
+                    <h3>Bulk Order & Enquiry Form</h3>
+                    <p class="small" style="color:var(--moq-highlight); font-weight:700;">Minimum Order Quantity: 50 Pcs</p>
+                    
+                    <!-- Success Message -->
+                    <div id="successMessage" class="success-message">
+                        <h4 style="margin:0 0 8px 0;">✅ ENQUIRY SUCCESSFULLY SUBMITTED!</h4>
+                        <p style="margin:0; font-size:14px;">Thank you for your interest in YANGER BOYS. Our team will call you shortly regarding your bulk order.</p>
+                    </div>
+                    
+                    <!-- Form with SIMPLE FIELD NAMES -->
+                    <form id="bulk-enquiry-form" action="https://script.google.com/macros/s/AKfycbwZE_4bJBqBmQCUWwaz0ptm1mN5ci5wTXlsmgUPq5I4wk4U1iEKu_SmAoXt1lZnTEcC/exec" method="POST" target="hidden_iframe">
+                        <input class="input" id="name" name="name" placeholder="Your Name / Company" required>
+                        <input class="input" id="email" name="email" placeholder="Email" required>
+                        <input class="input" id="phone" name="phone" placeholder="Phone" required>
+                        <input class="input" id="product" name="product" placeholder="Interested Product(s)" required>
+                        <button type="submit" class="btn btn-accent" style="width:100%">SUBMIT ENQUIRY</button>
+                    </form>
+                    
+                    <iframe name="hidden_iframe" style="display:none;"></iframe>
+                    
+                    <div style="margin-top:18px; text-align:center;">
+                        <a href="https://wa.me/919310191646?text=Hello%20Yanger%20Boys%2C%20I%20have%20a%20bulk%20enquiry." target="_blank" style="color:#25D366; font-weight:700;">
+                            WHATSAPP US NOW (+91 93101 91646)
+                        </a>
+                    </div>
+                </aside>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container" style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;">
+            <strong>YANGER BOYS</strong>
+            <div class="small">© <span id="year"></span> YANGER BOYS. All rights reserved.</div>
+        </div>
+    </footer>
+
+    <!-- IMAGE ZOOM MODAL -->
+    <div id="imageModal" class="image-modal">
+        <span class="modal-close">&times;</span>
+        <div class="modal-nav">
+            <span class="nav-btn prev-btn">&#10094;</span>
+            <span class="nav-btn next-btn">&#10095;</span>
+        </div>
+        <img class="modal-content" id="modalImage">
+        <div class="modal-caption" id="modalCaption"></div>
+    </div>
+
+    <script>
+        const PRODUCT_IMAGE_LINK = "https://i.ibb.co/LzL8JTPv/Chat-GPT-Image-Oct-13-2025-01-46-57-PM.png";
+        const SHIRT_IMAGE_LINK = "https://i.ibb.co/LzL8JTPv/Chat-GPT-Image-Oct-13-2025-01-46-57-PM.png"; // Default shirt image
+
+        function getProductCardHTML(id, name, link) {
+            return `
+                <article class="card">
+                    <div class="img-placeholder product-gallery" id="${id}-gallery" onclick="openImageModal('${id}-gallery')">
+                        <img src="${link}" alt="${name} Front">
+                        <img src="${link}" alt="${name} Back">
+                        <img src="${link}" alt="${name} Side">
+                    </div>
+                    <div class="card-content">
+                        <div class="product-id">${id}</div>
+                        <div class="product-title">${name}</div>
+                        <div class="product-meta">High-Quality Fabric • MOQ 50 Pcs</div>
+                        <div class="price">Wholesale Price on Enquiry</div>
+                        <div class="button-group">
+                            <button class="action-btn order-btn" onclick="prefillForm('${id} ${name}')">ORDER NOW</button>
+                            <a href="https://wa.me/919310191646?text=Enquiry%20for%20${id}%20${name}%20(MOQ%2050%20Pcs)." target="_blank" class="action-btn whatsapp-btn">WHATSAPP</a>
+                        </div>
+                    </div>
+                </article>
+            `;
+        }
+
+        // UPDATED GENTS PRODUCTS - 10 PRODUCTS
+        const gentsProducts = [
+            { id: 'YA-510', name: 'Mens Cargo Colour - STD', link: 'https://i.ibb.co/TDY9wfYh/Untitled-design.png' },
+            { id: '0-002', name: 'Non Denim Pant For Mens', link: 'https://i.ibb.co/QFs6CMq6/Whats-App-Image-2025-10-15-at-13-23-47.jpg' },
+            { id: 'YA-267', name: 'Mens Cargo Straight Leg', link: 'https://i.ibb.co/p6mqdFHW/Whats-App-Image-2025-10-15-at-15-44-13.jpg' },
+            { id: 'YA-493', name: 'Mens Jogger Colour - Cream', link: 'https://i.ibb.co/1fjLq3YH/Whats-App-Image-2025-10-15-at-15-51-08.jpg' },
+            { id: 'YA-002', name: 'Non Denim Pant For Mens Colour Light Grey', link: 'https://i.ibb.co/RG08hRt4/Aesthetic-Photo-Collage-Instagram-Post-1.png' },
+            // NEW GENTS PRODUCTS ADDED
+            { id: 'YA-000', name: 'Stretchable Non-Denim - Olive Green', link: 'https://i.ibb.co/WmBKwbb/Whats-App-Image-2025-10-17-at-15-33-53.jpg' },
+            { id: 'YA-001', name: 'Stretchable Non-Denim - Light Grey Pant', link: 'https://i.ibb.co/1fD0Zn5D/Whats-App-Image-2025-10-17-at-15-27-07.jpg' },
+            { id: 'YA-003', name: 'Stretchable Non-Denim - Navy Blue Pant', link: 'https://i.ibb.co/JwxCv324/Whats-App-Image-2025-10-17-at-15-12-44.jpg' },
+            { id: 'YA-005', name: 'Stretchable Non-Denim - Dark Brown Pant', link: 'https://i.ibb.co/Kp2s6Rgg/Whats-App-Image-2025-10-17-at-15-36-52.jpg' },
+        ];
+        
+        // UPDATED KIDS PRODUCTS - 10 PRODUCTS
+        const kidsProducts = [
+            { id: 'Artical No - 517', name: 'Kids Jogger Colour - STD', link: 'https://i.ibb.co/mC1493my/Yanger-Boys-Square-Image.jpg' },
+            { id: 'Jogger - 517', name: 'Kids Jogger Colour - Black', link: 'https://i.ibb.co/d4F0Hz3r/Aesthetic-Photo-Collage-Instagram-Post.png' },
+            { id: 'Jogger-517', name: 'Kids Jogger Colour - Brown', link: 'https://i.ibb.co/p6xcpkCV/Whats-App-Image-2025-10-15-at-16-39-25.jpg' },
+            { id: 'Jogger-0517', name: 'Kids Jogger Colour - Dark Green', link: 'https://i.ibb.co/YBTp4K04/Whats-App-Image-2025-10-15-at-16-58-52.jpg' },
+            { id: 'Jogger-00517', name: 'Kids Jogger Colour - Dark Sea Blue', link: 'https://i.ibb.co/nMddLw9c/Whats-App-Image-2025-10-15-at-17-05-41.jpg' },
+            // NEW KIDS PRODUCTS ADDED
+            { id: 'K-601', name: 'Kids Jogger - Navy Green', link: 'https://i.ibb.co/2YpPHw4m/Untitled-design-1.png' },
+            { id: 'K-602', name: 'Kids Jogger - Natural Grey', link: 'https://i.ibb.co/7Jc6CMC9/Whats-App-Image-2025-10-18-at-12-45-14.jpg' },
+            { id: 'K-603', name: 'Kids Jogger - Z Black', link: 'https://i.ibb.co/fzktJRjP/Untitled-design-2.png' },
+                        
+        ];
+
+        // KOREAN SHIRTS COLLECTION - 10 PRODUCTS
+        const shirtsProducts = [
+            { id: '212627', name: 'Korean Style Shirt - White', link: 'https://i.ibb.co/CKC62nb5/Aesthetic-Photo-Collage-Instagram-Post-3.png' },
+            { id: '212643 A', name: 'Korean Style Shirt - White - Lion Print', link: 'https://i.ibb.co/B2v5CTSH/Aesthetic-Photo-Collage-Instagram-Post-2.png' },
+            { id: '212626', name: 'Korean Style Shirt - Black - Bird Print', link: 'https://i.ibb.co/5h5LsGLM/Aesthetic-Photo-Collage-Instagram-Post-4.png' },
+            { id: '212630', name: 'Korean Style Shirt - White - Multi Colour Print', link: 'https://i.ibb.co/qtz2g6K/Aesthetic-Photo-Collage-Instagram-Post-5.png' },
+            { id: '212628', name: 'Korean Style Shirt - White - Printed', link: 'https://i.ibb.co/qLfF1V25/Aesthetic-Photo-Collage-Instagram-Post-6.png' },
+            { id: '212645', name: 'Korean Style Shirt - Black - Tiger Print', link: 'https://i.ibb.co/Xfdzqw22/Aesthetic-Photo-Collage-Instagram-Post-7.png' },
+            { id: '212644 A', name: 'Korean Style Shirt - White - Lion Print', link: 'https://i.ibb.co/B2Rt94rT/Aesthetic-Photo-Collage-Instagram-Post-8.png' },
+            { id: '212632', name: 'Korean Style Shirt - White - Blue Printed', link: 'https://i.ibb.co/DPcKrBPx/Aesthetic-Photo-Collage-Instagram-Post-9.png' },
+            { id: '212635', name: 'Korean Style Shirt - Black - Golden Printed', link: 'https://i.ibb.co/7NpZY8x9/Aesthetic-Photo-Collage-Instagram-Post-10.png' },
+            { id: '212633', name: 'Korean Style Shirt - Black - Multi Colour Printed', link: 'https://i.ibb.co/YTpNWygs/Aesthetic-Photo-Collage-Instagram-Post-11.png' }
+        ];
+
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelector('#gents-product-grid').innerHTML =
+                gentsProducts.map(p => getProductCardHTML(p.id, p.name, p.link)).join('');
+            document.querySelector('#kids-product-grid').innerHTML =
+                kidsProducts.map(p => getProductCardHTML(p.id, p.name, p.link)).join('');
+            document.querySelector('#shirts-product-grid').innerHTML =
+                shirtsProducts.map(p => getProductCardHTML(p.id, p.name, p.link)).join('');
+
+            document.getElementById('year').textContent = new Date().getFullYear();
+            
+            // Initialize image gallery cycling
+            initializeImageGalleries();
+            
+            // Add category tab functionality
+            setupCategoryTabs();
+        });
+
+        function setupCategoryTabs() {
+            const tabs = document.querySelectorAll('.category-tab');
+            const collections = document.querySelectorAll('.collection-section');
+            
+            tabs.forEach(tab => {
+                tab.addEventListener('click', () => {
+                    // Remove active class from all tabs
+                    tabs.forEach(t => t.classList.remove('active'));
+                    // Add active class to clicked tab
+                    tab.classList.add('active');
+                    
+                    // Hide all collections
+                    collections.forEach(collection => {
+                        collection.style.display = 'none';
+                    });
+                    
+                    // Show selected collection
+                    const category = tab.getAttribute('data-category');
+                    document.getElementById(`${category}-collection`).style.display = 'block';
+                });
+            });
+        }
+
+        function prefillForm(productName) {
+            document.getElementById('product').value = productName;
+            document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // IMAGE ZOOM FUNCTIONALITY
+        let currentGallery = null;
+        let currentImageIndex = 0;
+
+        function initializeImageGalleries() {
+            const galleries = document.querySelectorAll('.product-gallery');
+            galleries.forEach(gallery => {
+                const images = gallery.querySelectorAll('img');
+                let currentIndex = 0;
+                
+                setInterval(() => {
+                    images[currentIndex].style.opacity = 0;
+                    currentIndex = (currentIndex + 1) % images.length;
+                    images[currentIndex].style.opacity = 1;
+                }, 3000);
+            });
+        }
+
+        function openImageModal(galleryId) {
+            const modal = document.getElementById('imageModal');
+            const modalImg = document.getElementById('modalImage');
+            const captionText = document.getElementById('modalCaption');
+            
+            const gallery = document.getElementById(galleryId);
+            const images = gallery.querySelectorAll('img');
+            
+            currentGallery = galleryId;
+            currentImageIndex = 0;
+            
+            modalImg.src = images[currentImageIndex].src;
+            captionText.innerHTML = images[currentImageIndex].alt;
+            
+            modal.style.display = 'block';
+        }
+
+        // Modal event listeners
+        document.querySelector('.modal-close').addEventListener('click', function() {
+            document.getElementById('imageModal').style.display = 'none';
+        });
+
+        document.querySelector('.prev-btn').addEventListener('click', function() {
+            navigateImages(-1);
+        });
+
+        document.querySelector('.next-btn').addEventListener('click', function() {
+            navigateImages(1);
+        });
+
+        function navigateImages(direction) {
+            if (!currentGallery) return;
+            
+            const gallery = document.getElementById(currentGallery);
+            const images = gallery.querySelectorAll('img');
+            
+            currentImageIndex = (currentImageIndex + direction + images.length) % images.length;
+            
+            const modalImg = document.getElementById('modalImage');
+            const captionText = document.getElementById('modalCaption');
+            
+            modalImg.src = images[currentImageIndex].src;
+            captionText.innerHTML = images[currentImageIndex].alt;
+        }
+
+        window.addEventListener('click', function(event) {
+            const modal = document.getElementById('imageModal');
+            if (event.target === modal) {
+                modal.style.display = 'none';
+            }
+        });
+
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                document.getElementById('imageModal').style.display = 'none';
+            }
+        });
+
+        // ✅ FORM SUCCESS HANDLER
+        document.getElementById('bulk-enquiry-form').addEventListener('submit', function(e) {
+            setTimeout(function() {
+                // Success message show karo
+                document.getElementById('successMessage').style.display = 'block';
+                
+                // 5 second baad message hide ho jaye
+                setTimeout(function() {
+                    document.getElementById('successMessage').style.display = 'none';
+                }, 5000);
+                
+                // Form reset karo
+                document.getElementById('bulk-enquiry-form').reset();
+                
+            }, 1000);
+        });
+    </script>
+</body>
+</html>
